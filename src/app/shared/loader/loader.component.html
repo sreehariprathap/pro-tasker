@@ -1,0 +1,8 @@
+<div *ngIf="this.loader.getLoading()" class="cssload-container">
+  <ng-lottie
+    [options]="options"
+    width="400px"
+    height="500px"
+    (animationCreated)="animationCreated($event)"
+  ></ng-lottie>
+</div>

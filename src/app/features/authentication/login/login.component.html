@@ -1,0 +1,20 @@
+<div class="login-layout">
+  <div class="app-centerd-layout app-card gap-5">
+    <img src="../../../../assets/light (1).png" alt="logo" class="w-56 " />
+    <div class="flex flex-col gap-3 my-5">
+      <input type="text" name="email" class="app-input" placeholder="email" id="" />
+      <input type="password" name="email" class="app-input" placeholder="password" id="" />
+      <button class="app-btn-primary">Login</button>
+    </div>
+    <div>
+      <div class="app-btn-round" (click)="authService.GoogleAuth()">
+        <img src="../../../assets/icons/google.png" class="w-5 h-5" alt="" />
+      </div>
+    </div>
+    <div class="mt-3">
+      <a class=""
+        >Dont have an account yet ? <span class="underline">sign up</span></a
+      >
+    </div>
+  </div>
+</div>

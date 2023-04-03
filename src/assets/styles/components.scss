@@ -1,0 +1,12 @@
+.app-input {
+  @apply shadow-sm focus:ring input bg-base-100;
+}
+.app-btn {
+  @apply dark:btn;
+}
+.app-btn-round {
+  @apply shadow-lg rounded-full bg-slate-100 dark:bg-black hover:shadow-md cursor-pointer duration-150 ease-linear w-10 h-10 flex justify-center items-center;
+}
+.app-btn-primary {
+  @apply btn btn-primary;
+}
