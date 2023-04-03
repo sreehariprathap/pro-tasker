@@ -1,0 +1,7 @@
+@import "src/assets/styles/library.scss";
+.active {
+  @apply text-primary;
+  .icon {
+    @apply text-primary;
+  }
+}

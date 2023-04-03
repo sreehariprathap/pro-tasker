@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { TopbarComponent } from './shared/components/topbar/topbar.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +17,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     CoreModule,
     SharedModule,
     LoaderComponent,
+    NavbarComponent,
+    TopbarComponent,
   ],
   exports: [SharedModule],
   providers: [],
