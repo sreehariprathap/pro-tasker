@@ -41,5 +41,6 @@ module.exports = {
     require("daisyui"),
     require("@tailwindcss/typography"),
     require("tailwind-scrollbar"),
+    require('tailwind-scrollbar-hide')
   ],
 };

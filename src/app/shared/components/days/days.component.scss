@@ -1,10 +1,19 @@
 @import "src/assets/styles/library.scss";
 .day {
-  @apply p-5  text-primary font-semibold rounded-full h-7 w-7 flex justify-center items-center cursor-pointer;
-  border-radius: 150px;
+  @apply p-5  text-primary font-semibold rounded-3xl h-24 w-14 flex justify-center items-center cursor-pointer;
+  // border-radius: 150px;
   box-shadow: 5px 5px 10px #e0e3e6, -5px -5px 10px #ffffff;
 }
 .selected {
   @apply bg-primary text-white ring;
   // box-shadow: 1px 1px 2px #357beb, -1px -1px 2px #3f91ff;
+  .div {
+    @apply bg-white;
+  }
+}
+.div {
+  @apply h-[0.5px] w-7 bg-primary my-[2px];
+}
+.date {
+  @apply font-bold text-2xl;
 }

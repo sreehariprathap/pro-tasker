@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'localhost:8080',
+  baseUrl:
+    'https://my-json-server.typicode.com/sreehariprathap/pro-tasker-server',
   firebaseConfig: {
     apiKey: 'AIzaSyB7v9GX-F2WiOuTa97-Tdx8LIYscy7piws',
     authDomain: 'pro-tasker-4e990.firebaseapp.com',

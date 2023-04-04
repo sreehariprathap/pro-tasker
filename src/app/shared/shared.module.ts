@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoaderComponent } from './loader/loader.component';
+import { CommonModule, DatePipe } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,5 +22,6 @@ export function playerFactory() {
     ReactiveFormsModule,
   ],
   exports: [FontAwesomeModule, LottieModule, ReactiveFormsModule, FormsModule],
+  providers: [ DatePipe],
 })
 export class SharedModule {}

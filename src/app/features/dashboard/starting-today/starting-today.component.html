@@ -1,0 +1,15 @@
+<h1 class="app-heading my-5">Tasks for the day</h1>
+<div class="flex gap-3 xsm:overflow-x-scroll scrollbar-hide lg:flex-wrap" *ngIf="tasks.length">
+  <pro-tasker-tasks [task] ='item'
+    *ngFor="let item of tasks"
+  ></pro-tasker-tasks>
+</div>
+<div>
+  <h1 class="app-paragraph text-center"  *ngIf="!tasks.length">No tasks found</h1>
+  <div class="my-5 flex justify-center items-center">
+    <button class="app-btn-primary">
+      Create a task
+      <fa-icon class="icon fa-xl ml-3" [icon]="faCirclePlus"></fa-icon>
+    </button>
+  </div>
+</div>

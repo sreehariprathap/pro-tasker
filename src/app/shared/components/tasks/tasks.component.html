@@ -1,0 +1,16 @@
+<div
+  class="task-card p-2"
+  *ngIf="task"
+  [ngClass]="getCategoryClassName(task.categoryId)"
+>
+  <h1 class="app-sub-heading">{{ categories[task.categoryId] }}</h1>
+  <div class="h-24">
+    <h1 class="app-heading break-all">{{ validation.truncateText(task.name, 20) }}</h1>
+  </div>
+  <div class="app-paragraph h-20">
+    {{ validation.truncateText(task.description, 40) }}
+  </div>
+  <div class="flex justify-end my-5">
+    <fa-icon class="icon fa-xl" [icon]="faCircleCheck"></fa-icon>
+  </div>
+</div>

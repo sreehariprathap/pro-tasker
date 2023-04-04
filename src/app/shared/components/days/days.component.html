@@ -1,11 +1,13 @@
 <h1 class="app-heading">Days</h1>
-<div class="flex gap-3">
+<div class="flex gap-5 overflow-y-scroll p-3  scrollbar-hide" *ngIf="days">
   <div
-    class="day"
-    [ngClass]="{ selected: day === selectedDay }"
-    *ngFor="let day of days"
-    (click)="setSelectedDay(day)"
+    class="day flex flex-col justify-center "
+    [ngClass]="{ selected: item === selectedDay }"
+    *ngFor="let item of days"
+    (click)="setSelectedDay(item)"
   >
-    <p>{{ day.charAt(0) }}</p>
+    <p>{{ item.day.slice(0, 3) }}</p>
+    <div class="div"></div>
+    <p class="date">{{item.date | date:'d'}}</p>
   </div>
 </div>
