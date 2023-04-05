@@ -19,7 +19,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {}
 
   updateDate($event:any) {
-    console.log($event)
     this.date = $event;
   }
 }
