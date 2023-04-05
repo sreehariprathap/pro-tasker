@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 
 export function playerFactory() {
   return player;
@@ -20,8 +21,15 @@ export function playerFactory() {
     LottieModule.forRoot({ player: playerFactory }),
     FormsModule,
     ReactiveFormsModule,
+    CalendarModule,
   ],
-  exports: [FontAwesomeModule, LottieModule, ReactiveFormsModule, FormsModule],
-  providers: [ DatePipe],
+  exports: [
+    FontAwesomeModule,
+    LottieModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CalendarModule,
+  ],
+  providers: [DatePipe],
 })
 export class SharedModule {}

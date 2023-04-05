@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { CalenderRoutingModule } from './calender-routing.module';
 import { CalenderComponent } from './calender.component';
-
+import { CalanderComponent } from 'src/app/shared/components/calander/calander.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-  declarations: [
-    CalenderComponent
-  ],
+  declarations: [CalenderComponent],
   imports: [
     CommonModule,
-    CalenderRoutingModule
-  ]
+    CalenderRoutingModule,
+    CalanderComponent,
+    SharedModule,
+  ],
 })
-export class CalenderModule { }
+export class CalenderModule {}
