@@ -7,23 +7,34 @@
 .app-btn-round {
   @apply shadow-lg rounded-full bg-slate-100 dark:bg-black hover:shadow-md cursor-pointer duration-150 ease-linear w-10 h-10 flex justify-center items-center;
 }
+
+.app-btn-white {
+  @apply btn btn-ghost text-black bg-white;
+}
+.app-btn-white-outline {
+  @apply btn border-white text-white btn-outline;
+}
+
 .app-btn-primary {
   @apply btn btn-primary;
 }
 .task-card {
   @apply bg-primary min-h-[16rem] w-40 m-3 rounded-md text-white;
 }
+.project-color {
+  @apply bg-gradient-to-tr from-blue-500 to-blue-600;
+}
 .work-color {
   @apply bg-gradient-to-tr from-amber-300 to-red-500;
 }
 .personal-color {
-  @apply bg-gradient-to-tr from-green-300 to-lime-500;
+  @apply bg-gradient-to-tr from-green-500 to-lime-500;
 }
 .errands-color {
-  @apply bg-gradient-to-tr from-teal-300 to-yellow-400;
+  @apply bg-gradient-to-tr from-cyan-500 to-blue-500;
 }
 .fitness-color {
-  @apply bg-gradient-to-tr from-cyan-400 to-cyan-300;
+  @apply bg-gradient-to-tr from-cyan-500 to-cyan-600;
 }
 .home-color {
   @apply bg-gradient-to-tr from-purple-400 to-indigo-400;
@@ -36,6 +47,9 @@
 }
 .hobbies-color {
   @apply bg-gradient-to-tr from-green-400 to-violet-500;
+}
+.business-color {
+  @apply bg-gradient-to-tr from-green-600 to-lime-500;
 }
 .financial-color {
   @apply bg-gradient-to-tr from-green-600 to-lime-300;
@@ -55,6 +69,12 @@
 .entertainment-color {
   @apply bg-gradient-to-r from-lime-400 to-lime-500;
 }
+.volunteering-color {
+  @apply bg-gradient-to-r from-lime-400 to-lime-500;
+}
 .birthday-color {
   @apply bg-gradient-to-r from-blue-800 to-indigo-900;
+}
+.default-color {
+  @apply bg-gradient-to-r  from-blue-500 to-blue-600;
 }

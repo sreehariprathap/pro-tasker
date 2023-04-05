@@ -4,7 +4,7 @@ export class Constants {
 }
 
 export enum TaskCategory {
-  project = 1,
+  Project = 1,
   Work = 2,
   Personal = 3,
   Errands = 4,

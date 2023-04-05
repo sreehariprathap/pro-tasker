@@ -28,12 +28,14 @@ export class TasksComponent implements OnInit {
   getCategoryClassName(categoryId: number): string {
     switch (categoryId) {
       case 1:
-        return 'work-color';
+        return 'project-color';
       case 2:
-        return 'personal-color';
+        return 'work-color';
       case 3:
-        return 'errands-color';
+        return 'personal-color';
       case 4:
+        return 'errands-color';
+      case 5:
         return 'fitness-color';
       case 6:
         return 'home-color';
@@ -43,6 +45,8 @@ export class TasksComponent implements OnInit {
         return 'education-color';
       case 9:
         return 'hobbies-color';
+      case 10:
+        return 'business-color';
       case 11:
         return 'financial-color';
       case 12:
@@ -55,10 +59,12 @@ export class TasksComponent implements OnInit {
         return 'shopping-color';
       case 16:
         return 'entertainment-color';
+      case 17:
+        return 'volunteering-color';
       case 18:
         return 'birthday-color';
       default:
-        return '';
+        return 'default-color';
     }
   }
 }
