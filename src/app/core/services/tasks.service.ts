@@ -9,4 +9,12 @@ export class TasksService {
   getAllTasks() {
     return this.http.get('tasks');
   }
+
+  getAllTaskCategories() {
+    return this.http.get('categories');
+  }
+
+  createtask(params: any) {
+    return this.http.post('tasks', params);
+  }
 }

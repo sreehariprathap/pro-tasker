@@ -1,6 +1,9 @@
 .app-input {
   @apply shadow-sm focus:ring input bg-base-100;
 }
+.app-input-border {
+  @apply shadow-sm focus:ring input input-bordered w-full bg-base-100;
+}
 .app-btn {
   @apply dark:btn;
 }

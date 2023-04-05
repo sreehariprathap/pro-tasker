@@ -22,7 +22,6 @@ export class TasksComponent implements OnInit {
   constructor(public readonly validation: ValidationService) {}
 
   ngOnInit(): void {
-    console.log(this.task);
   }
 
   getCategoryClassName(categoryId: number): string {

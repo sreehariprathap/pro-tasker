@@ -1,20 +1,25 @@
 .app-heading-simple {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 30px;
   @apply font-bold;
 }
 
 .app-heading {
-  font-family: 'Carrois Gothic', sans-serif;
+  font-family: "Carrois Gothic", sans-serif;
   font-size: 25px;
   @apply mb-3;
 }
 .app-paragraph {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
-.app-sub-heading{
-  font-family: 'Titillium Web', sans-serif;
+.app-sub-heading {
+  font-family: "Titillium Web", sans-serif;
   font-size: 15px;
   @apply font-bold;
 }
 
+.app-form-label {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 15px;
+  @apply font-light mb-2;
+}

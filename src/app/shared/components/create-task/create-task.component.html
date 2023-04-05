@@ -1,0 +1,87 @@
+<label class="app-btn-primary" for="create-task-modal">
+  Create a task
+  <fa-icon class="icon fa-xl ml-3" [icon]="faCirclePlus"></fa-icon>
+</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="create-task-modal" class="modal-toggle" [(ngModel)]="isChecked" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold app-heading-simple text-lg">Create a new task 📖</h3>
+    <form
+      class="flex flex-col gap-3 py-3"
+      [formGroup]="taskForm"
+    >
+      <div>
+        <label for="datepicker" class="app-form-label"
+          >name</label
+        >
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="enter name"
+          class="app-input-border"
+          formControlName="name"
+        />
+      </div>
+      <div>
+        <label for="datepicker" class="app-form-label"
+          >category</label
+        >
+        <select
+          class="select w-full app-input-border"
+          formControlName="category"
+        >
+          <option disabled selected>select category</option>
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+      <div class="flex gap-2 justify-between">
+        <div class="w-full">
+          <label for="datepicker" class="app-form-label"
+            >from date</label
+          >
+          <input
+            type="date"
+            id="startDate"
+            class="app-input-border"
+            name="startDate"
+            formControlName="startDate"
+          />
+        </div>
+        <div class="w-full">
+          <label for="datepicker" class="app-form-label"
+            >due date</label
+          >
+          <input
+            type="date"
+            class="app-input-border"
+            id="dueDate"
+            name="dueDate"
+            formControlName="dueDate"
+          />
+        </div>
+      </div>
+      <div>
+        <label for="datepicker" class="app-form-label"
+          >description</label
+        >
+        <textarea
+          id="description"
+          class="app-input-border"
+          name="description"
+          formControlName="description"
+          placeholder="enter description"
+        ></textarea>
+      </div>
+      <div class="modal-action">
+        <button  class="btn" (click)="onSubmit()" [disabled]="!taskForm.valid">Create</button>
+        <label for="create-task-modal" class="btn">cancel</label>
+      </div>
+    </form>
+  </div>
+</div>

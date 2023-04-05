@@ -8,6 +8,7 @@ import { StartingTodayComponent } from './starting-today/starting-today.componen
 import { DueSoonComponent } from './due-soon/due-soon.component';
 import { TasksComponent } from 'src/app/shared/components/tasks/tasks.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CreateTaskComponent } from 'src/app/shared/components/create-task/create-task.component';
 
 @NgModule({
   declarations: [DashboardComponent, StartingTodayComponent, DueSoonComponent],
@@ -17,6 +18,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     DaysComponent,
     TasksComponent,
     SharedModule,
+    CreateTaskComponent,
   ],
   providers: [DatePipe],
 })
