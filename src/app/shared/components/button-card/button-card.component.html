@@ -1,3 +1,7 @@
-<div class="simple-button-card" [routerLink]="taskCategory.link">
+<div
+  class="simple-button-card"
+  [routerLink]="'tasks'"
+  [queryParams]="{ name: taskCategory.name, icon: taskCategory.icon }"
+>
   {{ taskCategory.name }} {{ taskCategory.icon }}
 </div>

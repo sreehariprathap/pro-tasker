@@ -13,9 +13,11 @@
     </div>
   </div>
   <div>
-    <h1 class="app-paragraph text-center" *ngIf="!tasks.length">
-      No tasks found
-    </h1>
+    <div *ngIf="tasks">
+      <h1 class="app-paragraph text-center" *ngIf="!tasks.length">
+        No tasks found
+      </h1>
+    </div>
     <div class="my-5 flex justify-center items-center">
       <pro-tasker-create-task></pro-tasker-create-task>
     </div>

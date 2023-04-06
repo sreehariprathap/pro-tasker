@@ -14,22 +14,17 @@ export class ProfileComponent implements OnInit {
     {
       name: 'All tasks',
       icon: '📝',
-      link: '',
     },
     {
       name: 'Completed tasks',
       icon: '✅',
-      link: '',
     },
     {
       name: 'Pending tasks',
       icon: '⏱️',
-      link: '',
     },
   ];
-  constructor(
-    private readonly auth: AuthenticationService,
-  ) {}
+  constructor(private readonly auth: AuthenticationService) {}
 
   ngOnInit(): void {
     const user = localStorage.getItem('user');

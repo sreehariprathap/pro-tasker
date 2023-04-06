@@ -1,0 +1,9 @@
+<div class="mb-24">
+  <h1 class="app-heading">{{ title }} {{ icon }}</h1>
+  <div class="flex flex-wrap">
+    <pro-tasker-task-card
+      [task]="item"
+      *ngFor="let item of tasks"
+    ></pro-tasker-task-card>
+  </div>
+</div>

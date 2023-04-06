@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./button-card.component.scss'],
 })
 export class ButtonCardComponent implements OnInit {
-  @Input() taskCategory!: { name: any; icon: any; link: any };
+  @Input() taskCategory!: { name: any; icon: any; link: any; isCompleted: any };
   constructor() {}
 
   ngOnInit(): void {}
