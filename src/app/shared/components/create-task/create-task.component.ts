@@ -5,6 +5,7 @@ import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TasksService } from 'src/app/core/services/tasks.service';
 import { HotToastService } from '@ngneat/hot-toast';
+import { TaskSmileyCategory } from 'src/app/core/constants/app.constants';
 
 @Component({
   selector: 'pro-tasker-create-task',
@@ -20,6 +21,7 @@ export class CreateTaskComponent implements OnInit {
 
   taskForm!: FormGroup;
   categories: any;
+  smileys: any = TaskSmileyCategory;
   constructor(
     private fb: FormBuilder,
     private readonly taskService: TasksService,

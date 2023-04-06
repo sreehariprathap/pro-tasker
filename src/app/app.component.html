@@ -1,8 +1,8 @@
 <div class="app-bgnd">
   <app-loader></app-loader>
-  <pro-tasker-topbar></pro-tasker-topbar>
+  <pro-tasker-topbar *ngIf="auth.isLoggedIn"></pro-tasker-topbar>
   <div class="bg-white p-2">
     <router-outlet></router-outlet>
   </div>
-  <pro-tasker-navbar></pro-tasker-navbar>
+  <pro-tasker-navbar *ngIf="auth.isLoggedIn"></pro-tasker-navbar>
 </div>

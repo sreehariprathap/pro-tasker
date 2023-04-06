@@ -27,10 +27,14 @@ export class TopbarComponent implements OnInit {
   faMagnifyingGlass = faMagnifyingGlass;
   faBars = faBars;
   showSidebar = false;
+  user: any;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const user = localStorage.getItem('user');
+    this.user = user ? JSON.parse(user) : null;
+  }
 
   toggleSidebar() {
     this.showSidebar = !this.showSidebar;

@@ -1,1 +1,33 @@
-<p>profile works!</p>
+<div class="mb-24">
+  <h1 class="app-heading">Profile</h1>
+  <div class="profile-card mb-3">
+    <div class="avatar">
+      <div
+        class="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+      >
+        <img [src]="user.photoURL" />
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <h1 class="app-heading-responsive text-center">
+        welcome, {{ user.displayName | titlecase }}
+      </h1>
+      <h1 class="app-paragraph text-center">
+        Enjoy a personalized experience with the ability to customize and manage
+        your account settings effortlessly.
+      </h1>
+    </div>
+  </div>
+  <div>
+    <h1 class="app-heading">Tasks</h1>
+    <div class="flex gap-2 xsm:flex-col lg:flex-row lg:flex-wrap">
+      <pro-tasker-button-card
+        *ngFor="let item of taskCategories"
+        [taskCategory]="item"
+      ></pro-tasker-button-card>
+    </div>
+    <div class="my-3 flex justify-center items-center">
+      <button class="btn-danger btn" (click)="logout()">logout</button>
+    </div>
+  </div>
+</div>

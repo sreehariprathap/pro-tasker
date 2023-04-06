@@ -1,6 +1,5 @@
 export class Constants {
-  constructor() {
-  }
+  constructor() {}
 }
 
 export enum TaskCategory {
@@ -21,5 +20,25 @@ export enum TaskCategory {
   Shopping = 15,
   Entertainment = 16,
   Volunteering = 17,
-  Birthday = 18
+  Birthday = 18,
+}
+export enum TaskSmileyCategory {
+  '📐' = 1,
+  '💻' = 2,
+  '🧑' = 3,
+  '✅' = 4,
+  '⛹️‍♂️' = 5,
+  '🏡' = 6,
+  '🌍' = 7,
+  '👩‍🏫' = 8,
+  '🏓' = 9,
+  '🏪' = 10,
+  '💵' = 11,
+  '🏥' = 12,
+  '👨‍👩‍👧‍👦' = 13,
+  '🧳' = 14,
+  '🛒' = 15,
+  '🍿' = 16,
+  '🕊️' = 17,
+  '🎂' = 18,
 }

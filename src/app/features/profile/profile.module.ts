@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
-
+import { ButtonCardComponent } from 'src/app/shared/components/button-card/button-card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    ProfileComponent
-  ],
+  declarations: [ProfileComponent],
   imports: [
     CommonModule,
-    ProfileRoutingModule
-  ]
+    ProfileRoutingModule,
+    ButtonCardComponent,
+    RouterModule,
+  ],
 })
-export class ProfileModule { }
+export class ProfileModule {}

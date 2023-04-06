@@ -9,6 +9,11 @@
   font-size: 25px;
   @apply mb-3;
 }
+
+.app-heading-responsive {
+  font-family: "Carrois Gothic", sans-serif;
+  @apply text-xl lg:text-3xl;
+}
 .app-paragraph {
   font-family: "Karla", sans-serif;
 }

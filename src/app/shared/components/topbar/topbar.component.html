@@ -1,7 +1,10 @@
 <div class="navbar sticky top-0 bg-slate-50 dark:bg-neutral">
-  <div class="flex-1">
+  <div class="flex-1" *ngIf="user">
     <h1 class="app-heading-simple">
-      Hi, <span class="text-slate-900">Sreehari!</span>
+      Hi,
+      <span class="text-slate-700"
+        >{{ user.displayName.split(" ")[0] | titlecase }}!</span
+      >
     </h1>
   </div>
   <div class="flex-none">

@@ -12,10 +12,18 @@
 }
 
 .app-btn-white {
-  @apply btn btn-ghost text-black bg-white;
+  @apply btn btn-ghost  text-black bg-white;
+  &:hover {
+    @apply bg-slate-100;
+  }
 }
+
 .app-btn-white-outline {
   @apply btn border-white text-white btn-outline;
+}
+
+.profile-card {
+  @apply flex justify-center items-center flex-col gap-5;
 }
 
 .app-btn-primary {
