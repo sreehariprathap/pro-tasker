@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -8,6 +9,7 @@ const routes: Routes = [
       import('./features/authentication/authentication.module').then(
         (m) => m.AuthenticationModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'dashboard',
@@ -15,11 +17,13 @@ const routes: Routes = [
       import('./features/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'tasks',
     loadChildren: () =>
       import('./features/tasks/tasks.module').then((m) => m.TasksModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'calender',
@@ -27,12 +31,15 @@ const routes: Routes = [
       import('./features/calender/calender.module').then(
         (m) => m.CalenderModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'profile',
     loadChildren: () =>
       import('./features/profile/profile.module').then((m) => m.ProfileModule),
+    canActivate: [AuthGuard],
   },
+  { path: '**', redirectTo: 'dashboard' },
 ];
 
 @NgModule({
