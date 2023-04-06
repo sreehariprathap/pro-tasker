@@ -1,0 +1,5 @@
+@import "src/assets/styles/library.scss";
+
+.task-horizontal-card {
+  @apply bg-primary max-h-[10rem] w-[20rem]  m-3 rounded-md text-white;
+}

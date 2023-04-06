@@ -1,3 +1,21 @@
 <div class="mb-24">
   <h1 class="app-heading">Tasks</h1>
+  <div>
+    <ejs-multiselect
+      id="multiselectelement"
+      [dataSource]="data"
+      [fields]="fields"
+      [placeholder]="'Select categories'"
+      (select)="addCategories($event)"
+      (removing)="remove($event)"
+      [selectAllText]="'select all categories'"
+      showSelectAll="true"
+    ></ejs-multiselect>
+  </div>
+  <div class="flex flex-wrap">
+    <pro-tasker-task-card
+      [task]="item"
+      *ngFor="let item of tasks"
+    ></pro-tasker-task-card>
+  </div>
 </div>

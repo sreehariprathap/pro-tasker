@@ -1,0 +1,36 @@
+<input type="checkbox" class="modal-toggle" [(ngModel)]="isChecked" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div
+    class="modal-box text-white project-color scrollbar-thumb-white scrollbar-track-primary scrollbar-w-1 scrollbar-thin"
+  >
+    <h3 class="font-bold app-simple-heading-responsive">
+      Hey, {{ user.displayName }} 👋
+    </h3>
+    <div class="py-2 flex justify-center">
+      <ng-lottie [options]="options" width="200px" height="200px"></ng-lottie>
+    </div>
+    <p class="pb-4 app-paragraph text-sm">
+      Welcome to Pro Tasker - the app that will revolutionize the way you manage
+      your tasks and get things done! With Pro Tasker, you'll never miss a
+      deadline, forget a task, or feel overwhelmed by your to-do list again.
+      <br />
+      <br />
+      We know that managing tasks can be a daunting task in itself, but don't
+      worry, Pro Tasker has got your back. Our user-friendly interface,
+      intuitive task management tools, and customizable features will make
+      managing your tasks a breeze.
+      <br />
+      <br />
+      So go ahead, tackle that to-do list with confidence and ease. And if you
+      ever feel overwhelmed, just remember, Pro Tasker is here to help. We wish
+      you all the best in your task management endeavors, and remember, a little
+      bit of humor goes a long way - so don't forget to take breaks and laugh at
+      the funny cat videos on YouTube. Happy tasking!
+    </p>
+    <div class="modal-action">
+      <label class="app-btn-white-outline" (click)="closeModal()"
+        >lets go 💗</label
+      >
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 @import "src/assets/styles/library.scss";
 
 .simple-button-card {
-  @apply py-2 px-3 rounded-md app-btn-white;
+  @apply py-2 px-3 rounded-md app-btn-white xsm:w-full;
   // border-radius: 80px;
   background: #ffffff;
   box-shadow:  11px 11px 50px #c9c9c9,

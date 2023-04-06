@@ -1,1 +1,32 @@
 @import "src/assets/styles/library.scss";
+.e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(
+    .e-warning
+  ):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(
+    .e-success
+  ):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),
+.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(
+    .e-error
+  ):not(.e-disabled),
+.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(
+    .e-warning
+  ):not(.e-error):not(.e-disabled) {
+  border-color: #b1bd15;
+  box-shadow: inset 1px 1px #b1bd15, inset -1px 0 #b1bd15, inset 0 -1px #b1bd15;
+}
+.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+.e-input-group:not(.e-float-icon-left):not(.e-float-input)::after,
+.e-input-group.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::before,
+.e-input-group.e-float-icon-left:not(.e-float-input) .e-input-in-wrap::after,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(
+    .e-float-input
+  )::before,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(
+    .e-float-input
+  )::after,
+.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-float-input)
+  .e-input-in-wrap::before,
+.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-float-input)
+  .e-input-in-wrap::after {
+  background: $primary;
+}

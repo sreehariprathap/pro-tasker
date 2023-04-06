@@ -26,7 +26,6 @@ export class CalanderComponent implements OnInit {
   }
 
   public onCellClick(args: any): void {
-    console.log(this.validation.formatDate(args.value));
     this.selectedDate = this.validation.formatDate(args.value);
     this.getAllTasks();
   }

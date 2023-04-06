@@ -10,6 +10,10 @@
   @apply mb-3;
 }
 
+.app-simple-heading-responsive {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-xl lg:text-3xl;
+}
 .app-heading-responsive {
   font-family: "Carrois Gothic", sans-serif;
   @apply text-xl lg:text-3xl;

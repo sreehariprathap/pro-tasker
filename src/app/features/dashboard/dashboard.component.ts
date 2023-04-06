@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'pro-tasker-dashboard',
@@ -14,11 +15,17 @@ export class DashboardComponent implements OnInit {
 
   date = this.formattedDate;
 
-  constructor() {}
+  isInitScreen = false;
 
-  ngOnInit(): void {}
+  constructor(private route: ActivatedRoute) {}
 
-  updateDate($event:any) {
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.isInitScreen = params['initialLogin'];
+    });
+  }
+
+  updateDate($event: any) {
     this.date = $event;
   }
 }
