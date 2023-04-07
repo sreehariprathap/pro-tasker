@@ -17,6 +17,12 @@
     @apply bg-slate-100;
   }
 }
+.app-btn-error {
+  @apply btn btn-ghost  text-white bg-error;
+  &:hover {
+    @apply bg-red-500;
+  }
+}
 
 .app-btn-white-outline {
   @apply btn border-white text-white btn-outline;

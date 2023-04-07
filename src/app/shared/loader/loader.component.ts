@@ -14,7 +14,7 @@ import { SharedModule } from '../shared.module';
 })
 export class LoaderComponent implements OnInit {
   options: AnimationOptions = {
-    path: '/assets/lottie/loader.json',
+    path: '/assets/lottie/loading_6.json',
   };
 
   animationCreated(animationItem: AnimationItem): void {}
