@@ -34,6 +34,8 @@ module.exports = {
         main: "#3a86ff",
         main2: "#60BAF9",
         main3: "#85D7FC",
+        dark: "#35363C",
+        dark2: "#343a40",
       },
     },
   },
@@ -41,6 +43,6 @@ module.exports = {
     require("daisyui"),
     require("@tailwindcss/typography"),
     require("tailwind-scrollbar"),
-    require('tailwind-scrollbar-hide')
+    require("tailwind-scrollbar-hide"),
   ],
 };

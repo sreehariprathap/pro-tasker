@@ -1,16 +1,17 @@
-<div class="navbar sticky top-0 bg-slate-50 dark:bg-neutral z-40">
+<div class="navbar sticky top-0 bg-slate-50 dark:bg-dark2 z-40">
   <div class="flex-1" *ngIf="user">
     <h1 class="app-heading-simple">
-      Hi,
-      <span class="text-slate-700"
-        >{{ user.displayName.split(" ")[0] | titlecase }}!</span
-      >
+      <span class="dark:text-white text-slate-900"> Hi,</span>
+      {{ user.displayName.split(" ")[0] | titlecase }}!
     </h1>
   </div>
   <div class="flex-none">
     <label tabindex="0" class="btn btn-ghost btn-circle">
       <div class="indicator">
-        <fa-icon class="icon fa-xl" [icon]="faMagnifyingGlass"></fa-icon>
+        <fa-icon
+          class="text-slate-800 dark:text-white fa-xl"
+          [icon]="faMagnifyingGlass"
+        ></fa-icon>
       </div>
     </label>
     <!-- <label tabindex="0" class="btn btn-ghost btn-circle">

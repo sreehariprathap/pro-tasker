@@ -1,7 +1,7 @@
-<div class="app-bgnd  scrollbar-thumb-white scrollbar-track-primary scrollbar-w-1 scrollbar-thin">
+<div class="app-bgnd  scrollbar-thumb-white dark:scrollbar-thumb-dark2 scrollbar-track-primary scrollbar-w-1 scrollbar-thin">
   <app-loader></app-loader>
   <pro-tasker-topbar *ngIf="auth.isLoggedIn"></pro-tasker-topbar>
-  <div class="bg-white p-2">
+  <div class=" p-2">
     <router-outlet></router-outlet>
   </div>
   <pro-tasker-navbar *ngIf="auth.isLoggedIn"></pro-tasker-navbar>

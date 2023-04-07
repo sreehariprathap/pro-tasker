@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .app-bgnd {
-  @apply bg-base-100 dark:bg-neutral;
+  @apply bg-base-100 dark:bg-neutral min-h-[100vh];
 }
 
 

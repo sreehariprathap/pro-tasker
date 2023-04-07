@@ -64,3 +64,31 @@
   width: 40px;
   @apply m-3;
 }
+.calender-class {
+  @apply dark:bg-dark2 rounded-md dark:text-white;
+  .e-footer-container {
+    @apply dark:bg-dark2 dark:text-white;
+  }
+}
+
+.e-calendar .e-header .e-title,
+.e-bigger.e-small .e-calendar .e-header .e-title {
+  color: #fff;
+}
+
+::ng-deep .e-calendar th,
+.e-bigger.e-small .e-calendar th {
+  color: #fff;
+}
+::ng-deep .e-calendar .e-content span,
+.e-bigger.e-small .e-calendar .e-content span {
+  color: #fff;
+}
+@layer utilities {
+  .app-btn-dark {
+    @apply btn btn-ghost  text-white bg-gray-800;
+    &:hover {
+      @apply bg-gray-900;
+    }
+  }
+}

@@ -1,14 +1,46 @@
-<div class="btm-nav shadow-2xl">
-  <li routerLinkActive="active" routerLink="dashboard">
-    <fa-icon class="icon fa-xl" [icon]="faHome"></fa-icon>
-  </li>
-  <li routerLinkActive="active" routerLink="tasks">
-    <fa-icon class="icon fa-xl" [icon]="faListCheck"></fa-icon>
-  </li>
-  <li routerLinkActive="active" routerLink="calender">
-    <fa-icon class="icon fa-xl" [icon]="faCalendar"></fa-icon>
-  </li>
-  <li routerLinkActive="active" routerLink="profile">
-    <fa-icon class="icon fa-xl" [icon]="faUser"></fa-icon>
-  </li>
+<div
+  class="nav-bar"
+>
+  <ul class="flex justify-around">
+    <li
+      class="flex-1 py-2 text-center"
+      routerLinkActive="active"
+      routerLink="dashboard"
+    >
+      <fa-icon
+        class="block icon mx-auto text-gray-500 dark:text-gray-400 mb-1"
+        [icon]="faHome"
+      ></fa-icon>
+    </li>
+    <li
+      class="flex-1 py-2 text-center"
+      routerLinkActive="active"
+      routerLink="tasks"
+    >
+      <fa-icon
+        class="block icon mx-auto text-gray-500 dark:text-gray-400 mb-1"
+        [icon]="faListCheck"
+      ></fa-icon>
+    </li>
+    <li
+      class="flex-1 py-2 text-center"
+      routerLinkActive="active"
+      routerLink="calender"
+    >
+      <fa-icon
+        class="block icon mx-auto text-gray-500 dark:text-gray-400 mb-1"
+        [icon]="faCalendar"
+      ></fa-icon>
+    </li>
+    <li
+      class="flex-1 py-2 text-center"
+      routerLinkActive="active"
+      routerLink="profile"
+    >
+      <fa-icon
+        class="block icon mx-auto text-gray-500 dark:text-gray-400 mb-1"
+        [icon]="faUser"
+      ></fa-icon>
+    </li>
+  </ul>
 </div>
