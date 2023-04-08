@@ -9,11 +9,11 @@
 
 
 .app-card {
-  @apply bg-white dark:bg-slate-900 shadow-md hover:shadow-lg cursor-pointer duration-150 ease-in-out;
+  @apply bg-white dark:bg-dark2 shadow-md hover:shadow-lg cursor-pointer duration-150 ease-in-out;
 }
 
 .login-layout {
-  @apply flex xsm:flex-col lg:flex-row justify-center items-center h-[100vh] w-[100vw];
+  @apply flex xsm:flex-col lg:flex-row justify-center items-center h-[100vh] w-[90vw];
 }
 
 .app-centerd-layout {
