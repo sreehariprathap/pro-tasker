@@ -11,7 +11,7 @@
   [(ngModel)]="isChecked"
 />
 <div class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
+  <div class="modal-box modal-body-theme">
     <h3 class="font-bold app-heading-simple text-lg">Create a new task 📖</h3>
     <form class="flex flex-col gap-3 py-3" [formGroup]="taskForm">
       <div>
@@ -22,18 +22,24 @@
           id="name"
           name="name"
           placeholder="enter name"
-          class="app-input-border"
+          class="app-input-border dark-mode-input"
           formControlName="name"
         />
       </div>
       <div>
         <label for="datepicker" class="app-form-label">category</label>
         <select
-          class="select w-full app-input-border"
+          class="select w-full app-input-border dark-mode-input"
           formControlName="category"
         >
-          <option disabled selected>select category</option>
-          <option *ngFor="let category of categories" [value]="category.id">
+          <option disabled selected class="dark:bg-dark dark:text-white">
+            select category
+          </option>
+          <option
+            class="dark:bg-dark dark:text-white"
+            *ngFor="let category of categories"
+            [value]="category.id"
+          >
             {{ category.name }}{{ smileys[category.id] }}
           </option>
         </select>
@@ -44,7 +50,7 @@
           <input
             type="date"
             id="startDate"
-            class="app-input-border"
+            class="app-input-border dark-mode-input"
             name="startDate"
             formControlName="startDate"
           />
@@ -53,7 +59,7 @@
           <label for="datepicker" class="app-form-label">due date</label>
           <input
             type="date"
-            class="app-input-border"
+            class="app-input-border dark-mode-input"
             id="dueDate"
             name="dueDate"
             formControlName="dueDate"
@@ -64,17 +70,23 @@
         <label for="datepicker" class="app-form-label">description</label>
         <textarea
           id="description"
-          class="app-input-border"
+          class="app-input-border dark-mode-input"
           name="description"
           formControlName="description"
           placeholder="enter description"
         ></textarea>
       </div>
       <div class="modal-action">
-        <button class="btn" (click)="onSubmit()" [disabled]="!taskForm.valid">
+        <button
+          class="app-btn-success"
+          (click)="onSubmit()"
+          [disabled]="!taskForm.valid"
+        >
           Create
         </button>
-        <label for="create-task-modal" class="btn">cancel</label>
+        <label for="create-task-modal" class="btn" (click)="taskForm.reset()"
+          >cancel</label
+        >
       </div>
     </form>
   </div>

@@ -5,7 +5,7 @@
   @apply shadow-sm focus:ring input input-bordered w-full bg-base-100;
 }
 .app-btn {
-  @apply dark:btn;
+  @apply dark:btn-ghost;
 }
 .app-btn-round {
   @apply shadow-lg rounded-full bg-slate-100 dark:bg-black hover:shadow-md cursor-pointer duration-150 ease-linear w-10 h-10 flex justify-center items-center;
@@ -36,6 +36,12 @@
   @apply btn btn-ghost  text-white bg-error;
   &:hover {
     @apply bg-red-500;
+  }
+}
+.app-btn-success {
+  @apply btn btn-ghost  text-white bg-success;
+  &:hover {
+    @apply bg-green-500;
   }
 }
 

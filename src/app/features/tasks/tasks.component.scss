@@ -30,3 +30,19 @@
   .e-input-in-wrap::after {
   background: $primary;
 }
+::ng-deep .e-multi-select-wrapper {
+  @apply dark:bg-dark;
+  &::placeholder {
+    @apply dark:text-white;
+  }
+}
+::ng-deep .e-multiselect.e-input-group.e-control-wrapper {
+  @apply dark:text-white;
+  &::placeholder {
+    @apply dark:text-white;
+  }
+}
+
+::ng-deep .e-ddl.e-popup.e-multi-select-list-wrapper.e-lib.e-control.e-popup-open {
+  @apply dark:text-white dark:bg-dark2;
+}
