@@ -55,6 +55,7 @@
 ::ng-deep td.e-selected span.e-day {
   background-color: $primary !important;
 }
+
 ::ng-deep .e-calendar .e-content span.e-day,
 .e-bigger.e-small .e-calendar .e-content span.e-day {
   font-size: 18px;
@@ -64,31 +65,39 @@
   width: 40px;
   @apply m-3;
 }
+
 .calender-class {
-  @apply dark:bg-dark2 rounded-md dark:text-white;
+  @apply dark:bg-dark2 rounded-md dark:text-white bg-white text-dark2;
   .e-footer-container {
-    @apply dark:bg-dark2 dark:text-white;
+    @apply dark:bg-dark2 dark:text-white text-black bg-white;
   }
 }
 
 .e-calendar .e-header .e-title,
 .e-bigger.e-small .e-calendar .e-header .e-title {
-  color: #fff;
+  @apply dark:text-white text-black;
 }
 
 ::ng-deep .e-calendar th,
 .e-bigger.e-small .e-calendar th {
-  color: #fff;
+  @apply dark:text-white text-black;
 }
 ::ng-deep .e-calendar .e-content span,
 .e-bigger.e-small .e-calendar .e-content span {
-  color: #fff;
+  @apply dark:text-white text-black;
 }
+
+::ng-deep .e-calendar .e-content span,
+.e-bigger.e-small .e-calendar .e-content span {
+  @apply dark:black-text text-black;
+}
+.e-calendar th,
+.e-bigger.e-small .e-calendar th {
+  @apply dark:black-text text-black;
+}
+
 @layer utilities {
-  .app-btn-dark {
-    @apply btn btn-ghost  text-white bg-gray-800;
-    &:hover {
-      @apply bg-gray-900;
-    }
+  .black-text {
+    color: white !important;
   }
 }

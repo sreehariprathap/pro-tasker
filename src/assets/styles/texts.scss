@@ -3,11 +3,21 @@
   font-size: 30px;
   @apply font-bold dark:text-white text-dark2;
 }
+.app-heading-simple-card {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 30px;
+  @apply font-bold text-white ;
+}
 
 .app-heading {
   font-family: "Carrois Gothic", sans-serif;
   font-size: 25px;
   @apply mb-3 dark:text-white text-dark2;
+}
+.app-heading-card {
+  font-family: "Carrois Gothic", sans-serif;
+  font-size: 25px;
+  @apply mb-3 dark:text-white text-white;
 }
 
 .app-simple-heading-responsive {
@@ -23,10 +33,15 @@
   @apply dark:text-white text-dark2;
 
 }
+.app-paragraph-card {
+  font-family: "Karla", sans-serif;
+  @apply text-white;
+
+}
 .app-sub-heading {
   font-family: "Titillium Web", sans-serif;
   font-size: 15px;
-  @apply font-bold dark:text-white text-dark2;
+  @apply font-bold dark:text-white text-white;
 }
 
 .app-form-label {

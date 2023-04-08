@@ -4,13 +4,15 @@
     *ngIf="task"
     [ngClass]="getCategoryClassName(task.categoryId)"
   >
-    <h1 class="app-sub-heading">{{ categories[task.categoryId] }}</h1>
+    <h1 class="app-sub-heading">
+      {{ categories[task.categoryId] }}
+    </h1>
     <div class="h-10">
-      <h1 class="app-heading break-all">
+      <h1 class="app-heading-card break-all">
         {{ validation.truncateText(task.name, 22) }}
       </h1>
     </div>
-    <div class="app-paragraph h-20">
+    <div class="app-paragraph-card h-20">
       {{ validation.truncateText(task.description, 50) }}
     </div>
   </div>
@@ -20,12 +22,15 @@
 
 <input type="checkbox" [id]="task.id" class="modal-toggle" />
 <div class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box text-white" [ngClass]="getCategoryClassName(task.categoryId)">
-    <h3 class="font-bold app-heading-simple text-lg">{{ task.name }}</h3>
-    <div class="py-2 flex ">
+  <div
+    class="modal-box text-white"
+    [ngClass]="getCategoryClassName(task.categoryId)"
+  >
+    <h3 class="font-bold app-heading-simple-card text-lg">{{ task.name }}</h3>
+    <div class="py-2 flex">
       <p class="app-paragraph text-lg">{{ task.startDate }}</p>
     </div>
-    <p class="pb-4 app-paragraph text-2xl">
+    <p class="pb-4 app-paragraph-card text-2xl">
       {{ task.description }}
     </p>
     <div class="modal-action">
