@@ -30,7 +30,7 @@ export class CalanderComponent implements OnInit {
     this.getAllTasks();
   }
   getAllTasks() {
-    this.tasksService.getAllTasks().subscribe((tasks: any) => {
+    this.tasksService.getAllTasks().valueChanges().subscribe((tasks: any) => {
       this.tasks = tasks.filter((t: any) => t.startDate === this.selectedDate);
     });
   }

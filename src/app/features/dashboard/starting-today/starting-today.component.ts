@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { TasksService } from 'src/app/core/services/tasks.service';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { LoaderService } from 'src/app/core/services/loader.service';
 
 @Component({
   selector: 'pro-tasker-starting-today',
@@ -20,7 +21,9 @@ export class StartingTodayComponent implements OnInit, OnChanges {
 
   @Input() date: any;
 
-  constructor(private tasksService: TasksService) {}
+  constructor(
+    private tasksService: TasksService,
+  ) {}
 
   ngOnInit(): void {
     this.getAllTasks();
@@ -31,8 +34,11 @@ export class StartingTodayComponent implements OnInit, OnChanges {
   }
 
   getAllTasks() {
-    this.tasksService.getAllTasks().subscribe((tasks: any) => {
-      this.tasks = tasks.filter((t: any) => t.startDate === this.date);
-    });
+    this.tasksService
+      .getAllTasks()
+      .valueChanges()
+      .subscribe((tasks: any) => {
+        this.tasks = tasks.filter((t: any) => t.startDate === this.date);
+      });
   }
 }

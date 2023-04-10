@@ -24,7 +24,7 @@ export class AllTasksComponent implements OnInit {
     this.getTasks();
   }
   getTasks() {
-    this.taskService.getAllTasks().subscribe((data: any) => {
+    this.taskService.getAllTasks().valueChanges().subscribe((data: any) => {
       if (this.title === 'Completed tasks') {
         this.tasks =data.filter((t: any) => t.isCompleted);
       } else if (this.title === 'Pending tasks') {

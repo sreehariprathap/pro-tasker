@@ -45,15 +45,17 @@ export class CreateTaskComponent implements OnInit {
   }
 
   onSubmit() {
-    this.taskService.createtask(this.taskForm.value).subscribe((data) => {
-      this.toast.success('task created successfully! 💗');
-      this.isChecked = false;
-    });
+    this.taskService.createtask(this.taskForm.value)
+    this.toast.success('task created successfully! 💗');
+    this.isChecked = false;
   }
 
   getAllTaskCategories() {
-    this.taskService.getAllTaskCategories().subscribe((data) => {
-      this.categories = data;
-    });
+    this.taskService
+      .getAllTaskCategories()
+      .valueChanges()
+      .subscribe((data) => {
+        this.categories = data;
+      });
   }
 }

@@ -23,7 +23,7 @@ export class TasksComponent implements OnInit {
   }
 
   getAllCategories() {
-    this.taskService.getAllTaskCategories().subscribe((data: any) => {
+    this.taskService.getAllTaskCategories().valueChanges().subscribe((data: any) => {
       data.forEach((element: any) => {
         element.name = `${element.name} ${this.smileyCategories[element.id]}`;
       });
@@ -32,7 +32,7 @@ export class TasksComponent implements OnInit {
   }
 
   getTasks(categories?: any) {
-    this.taskService.getAllTasks().subscribe((data: any) => {
+    this.taskService.getAllTasks().valueChanges().subscribe((data: any) => {
       if (categories && categories.length) {
         // const newArr = data.filter((t:any )=> t.categoryId )
         this.tasks = data.filter((task: any) => {
