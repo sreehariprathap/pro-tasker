@@ -10,7 +10,7 @@ const routes: Routes = [
       import('./features/authentication/authentication.module').then(
         (m) => m.AuthenticationModule
       ),
-      canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'dashboard',
@@ -38,6 +38,12 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () =>
       import('./features/profile/profile.module').then((m) => m.ProfileModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'search',
+    loadChildren: () =>
+      import('./features/search/search.module').then((m) => m.SearchModule),
     canActivate: [AuthGuard],
   },
   { path: '**', redirectTo: 'login' },

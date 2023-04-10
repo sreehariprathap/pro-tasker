@@ -1,10 +1,19 @@
 <!-- HTML code -->
 <div class="relative">
-  <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+  <div
+    class="absolute inset-y-0 left-0 flex items-center pl-3"
+    (click)="search()"
+  >
     <fa-icon
-    class="text-slate-800 dark:text-white fa-lg"
-    [icon]="faMagnifyingGlass"
-  ></fa-icon>
+      class="text-slate-800 dark:text-white fa-lg"
+      [icon]="faMagnifyingGlass"
+    ></fa-icon>
   </div>
-  <input type="text" placeholder="Search" class="xsm:w-full px-4 py-2 pl-10 dark:text-slate-50 dark:bg-dark2  text-gray-700 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300">
+  <input
+    [(ngModel)]="searchTerm"
+    type="text"
+    (keydown.enter)="search()"
+    placeholder="Search"
+    class="xsm:w-full px-4 py-2 pl-10 dark:text-slate-50 dark:bg-dark2 text-gray-700 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+  />
 </div>

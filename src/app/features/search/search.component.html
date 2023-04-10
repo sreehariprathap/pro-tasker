@@ -1,0 +1,17 @@
+<div *ngIf="searchTerm">
+  <p>showing results for {{ searchTerm }}</p>
+  <div class="py-2" *ngIf="results">
+    <div class="flex flex-wrap">
+      <pro-tasker-task-card
+        [task]="item"
+        *ngFor="let item of results"
+      ></pro-tasker-task-card>
+    </div>
+    <div *ngIf="!results.length" class="flex justify-center items-start">
+      <ng-lottie [options]="options" width="400px" height="500px"></ng-lottie>
+    </div>
+  </div>
+</div>
+<div *ngIf="!searchTerm" class="flex justify-center items-start">
+  <ng-lottie [options]="options" width="400px" height="500px"></ng-lottie>
+</div>
