@@ -1,23 +1,35 @@
 <div class="login-layout">
   <div class="app-centerd-layout app-card gap-5">
     <img src="../../../../assets/light (1).png" alt="logo" class="w-56" />
-    <div class="flex flex-col gap-3 my-5">
-      <input
-        type="text"
-        name="email"
-        class="app-input"
-        placeholder="email"
-        id=""
-      />
-      <input
-        type="password"
-        name="email"
-        class="app-input"
-        placeholder="password"
-        id=""
-      />
-      <button class="app-btn-primary">Login</button>
-    </div>
+    <form class="flex flex-col gap-3 my-5" [formGroup]="loginForm">
+      <div>
+        <label for="email" class="app-form-label">email</label>
+        <input
+          type="text"
+          name="email"
+          class="app-input-border dark-mode-input"
+          formControlName="email"
+          placeholder="enter email"
+          id="email"
+        />
+      </div>
+      <div>
+        <label for="password" class="app-form-label">password</label>
+        <input
+          type="password"
+          name="email"
+          class="app-input-border dark-mode-input"
+          formControlName="password"
+          placeholder="enter password"
+          id="password"
+        />
+      </div>
+      <button class="app-btn-primary" (click)="login()"
+      [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+    </form>
     <div>
       <div class="app-btn-round" (click)="authService.GoogleAuth()">
         <img src="../../../assets/icons/google.png" class="w-5 h-5" alt="" />

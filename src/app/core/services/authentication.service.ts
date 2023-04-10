@@ -7,6 +7,7 @@ import {
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { User } from '../models/User.model';
+import { HotToastService } from '@ngneat/hot-toast';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,8 @@ export class AuthenticationService {
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
-    public ngZone: NgZone // NgZone service to remove outside scope warning
+    public ngZone: NgZone, // NgZone service to remove outside scope warning
+    private readonly toast: HotToastService
   ) {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
@@ -43,6 +45,7 @@ export class AuthenticationService {
         this.afAuth.authState.subscribe((user) => {
           if (user) {
             this.router.navigate(['dashboard']);
+            this.toast.success('login successfull! 💗');
           }
         });
       })
