@@ -1,7 +1,7 @@
 <div *ngIf="searchTerm">
-  <p>showing results for {{ searchTerm }}</p>
+  <p class="app-paragraph p-1">showing results for {{ searchTerm }}</p>
   <div class="py-2" *ngIf="results">
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap xsm:justify-center lg:justify-start">
       <pro-tasker-task-card
         [task]="item"
         *ngFor="let item of results"
