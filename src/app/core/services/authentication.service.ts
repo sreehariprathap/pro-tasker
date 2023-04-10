@@ -86,6 +86,10 @@ export class AuthenticationService {
         window.alert(error);
       });
   }
+
+  getIsLoggedIn(): boolean {
+    return this.isLoggedIn;
+  }
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);

@@ -29,53 +29,18 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.authService.isLoggedIn) {
-      return true;
+    if (this.authService.getIsLoggedIn()) {
+      if (state.url === '/' || state.url === '/login') {
+        return this.router.parseUrl('/dashboard');
+      } else {
+        return true;
+      }
     } else {
-      return false;
+      if (state.url === '/' || state.url === '/login') {
+        return true;
+      } else {
+        return this.router.parseUrl('/login');
+      }
     }
   }
-  // canActivate(
-  //   route: ActivatedRouteSnapshot,
-  //   state: RouterStateSnapshot
-  // ):
-  //   | Observable<boolean | UrlTree>
-  //   | Promise<boolean | UrlTree>
-  //   | boolean
-  //   | UrlTree {
-  //   const commonRoutes = this.pages.commonRoutes;
-  //   const authRoutes = this.pages.authRoutes;
-  //   const accessRoutes = this.pages.accessRoutes;
-  //   const isToken = this.authService.isLoggedIn;
-  //   this.url = state.url;
-
-  //   if (commonRoutes.some(this.checkUrl)) {
-  //     return true;
-  //   }
-
-  //   if (!isToken && authRoutes.some(this.checkUrl)) {
-  //     return true;
-  //   } else if (isToken) {
-  //     if (accessRoutes['all'].some(this.checkUrl)) {
-  //       return true;
-  //     } else {
-  //       this.router.navigate(['/home']);
-  //       return true;
-  //     }
-  //   }
-
-  //   this.router.navigate(['/']);
-  //   return false;
-  // }
-
-  // private absoluteUrl(path: string): string {
-  //   if (!path) {
-  //     return path;
-  //   }
-
-  //   const url = path.match(/^\//) ? path : `/${path}`;
-  //   return url.match(/\/$/) ? url.slice(0, -1) : url;
-  // }
-
-  // private readonly checkUrl = (r: any): boolean => this.url === this.absoluteUrl(r) || !!this.url.match(new RegExp(`^${this.absoluteUrl(r)}`));
 }

@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: '',
+    path: 'login',
     loadChildren: () =>
       import('./features/authentication/authentication.module').then(
         (m) => m.AuthenticationModule
       ),
+      canActivate: [AuthGuard],
   },
   {
     path: 'dashboard',
@@ -38,7 +40,7 @@ const routes: Routes = [
       import('./features/profile/profile.module').then((m) => m.ProfileModule),
     canActivate: [AuthGuard],
   },
-  { path: '**', redirectTo: 'dashboard' },
+  { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({
