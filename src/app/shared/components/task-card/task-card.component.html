@@ -28,13 +28,18 @@
   >
     <h3 class="font-bold app-heading-simple-card text-lg">{{ task.name }}</h3>
     <div class="py-2 flex">
-      <p class="app-paragraph text-lg">{{ task.startDate }}</p>
+      <p class="app-paragraph-card text-lg">{{ task.startDate }}</p>
     </div>
     <p class="pb-4 app-paragraph-card text-2xl">
       {{ task.description }}
     </p>
     <div class="modal-action">
-      <label class="app-btn-white-outline">mark as done</label>
+      <label class="app-btn-white-outline" *ngIf="!task.isCompleted" (click)="markTaskAsDone(task.id)"
+        >mark as done</label
+      >
+      <label class="flex justify-center items-center" *ngIf="task.isCompleted"
+        >completed 🥳</label
+      >
       <label [for]="task.id" class="app-btn-white-outline">close</label>
     </div>
   </div>

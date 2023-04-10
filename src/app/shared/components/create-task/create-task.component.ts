@@ -45,9 +45,10 @@ export class CreateTaskComponent implements OnInit {
   }
 
   onSubmit() {
-    this.taskService.createtask(this.taskForm.value)
+    this.taskService.createtask(this.taskForm.value);
     this.toast.success('task created successfully! 💗');
     this.isChecked = false;
+    this.taskForm.reset();
   }
 
   getAllTaskCategories() {

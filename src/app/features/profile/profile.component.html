@@ -5,7 +5,14 @@
       <div
         class="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
       >
-        <img [src]="user.photoURL" />
+        <img
+          [src]="
+            user.photoURL
+              ? user.photoURL
+              : 'https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png'
+          "
+          onerror="this.src='https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png'"
+        />
       </div>
     </div>
     <div class="flex flex-col">
@@ -20,7 +27,7 @@
   </div>
   <div>
     <h1 class="app-heading">Tasks</h1>
-    <div class="flex gap-2 xsm:flex-col lg:flex-row lg:flex-wrap ">
+    <div class="flex gap-2 xsm:flex-col lg:flex-row lg:flex-wrap">
       <pro-tasker-button-card
         *ngFor="let item of taskCategories"
         [taskCategory]="item"

@@ -19,9 +19,15 @@ export class TasksComponent implements OnInit {
   faCircleCheck = faCircleCheck;
   tasks: any = null;
   categories = TaskCategory;
-  constructor(public readonly validation: ValidationService) {}
+  constructor(
+    public readonly validation: ValidationService,
+    private readonly taskService: TasksService
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  markTaskAsDone(id: any) {
+    this.taskService.markTaskasDone(id);
   }
 
   getCategoryClassName(categoryId: number): string {

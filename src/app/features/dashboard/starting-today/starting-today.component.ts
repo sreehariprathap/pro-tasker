@@ -23,6 +23,7 @@ export class StartingTodayComponent implements OnInit, OnChanges {
 
   constructor(
     private tasksService: TasksService,
+    private readonly loader: LoaderService
   ) {}
 
   ngOnInit(): void {
@@ -34,11 +35,13 @@ export class StartingTodayComponent implements OnInit, OnChanges {
   }
 
   getAllTasks() {
+    this.loader.setLoading(true);
     this.tasksService
       .getAllTasks()
       .valueChanges()
       .subscribe((tasks: any) => {
         this.tasks = tasks.filter((t: any) => t.startDate === this.date);
+        this.loader.setLoading(false);
       });
   }
 }

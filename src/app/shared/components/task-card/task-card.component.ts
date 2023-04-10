@@ -4,11 +4,12 @@ import { ValidationService } from 'src/app/core/services/validation.service';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { TaskCategory } from 'src/app/core/constants/app.constants';
 import { SharedModule } from '../../shared.module';
+import { TasksService } from 'src/app/core/services/tasks.service';
 
 @Component({
   selector: 'pro-tasker-task-card',
   standalone: true,
-  imports: [CommonModule,SharedModule],
+  imports: [CommonModule, SharedModule],
   templateUrl: './task-card.component.html',
   styleUrls: ['./task-card.component.scss'],
 })
@@ -19,9 +20,17 @@ export class TaskCardComponent implements OnInit {
   tasks: any = null;
   categories = TaskCategory;
 
-  constructor(public readonly validation: ValidationService) {}
+  constructor(
+    public readonly validation: ValidationService,
+    private readonly taskService: TasksService
+  ) {}
 
   ngOnInit(): void {}
+
+  markTaskAsDone(id: any) {
+    this.taskService.markTaskasDone(id);
+  }
+
   getCategoryClassName(categoryId: number): string {
     switch (categoryId) {
       case 1:

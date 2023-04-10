@@ -6,7 +6,7 @@
 .app-heading-simple-card {
   font-family: "Titillium Web", sans-serif;
   font-size: 30px;
-  @apply font-bold text-white ;
+  @apply font-bold text-white;
 }
 
 .app-heading {
@@ -22,7 +22,7 @@
 
 .app-simple-heading-responsive {
   font-family: "Titillium Web", sans-serif;
-  @apply text-xl lg:text-3xl dark:text-white text-dark2;
+  @apply text-xl lg:text-3xl text-white;
 }
 .app-heading-responsive {
   font-family: "Carrois Gothic", sans-serif;
@@ -31,12 +31,10 @@
 .app-paragraph {
   font-family: "Karla", sans-serif;
   @apply dark:text-white text-dark2;
-
 }
 .app-paragraph-card {
   font-family: "Karla", sans-serif;
   @apply text-white;
-
 }
 .app-sub-heading {
   font-family: "Titillium Web", sans-serif;

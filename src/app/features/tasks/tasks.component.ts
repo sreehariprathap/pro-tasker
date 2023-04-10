@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskSmileyCategory } from 'src/app/core/constants/app.constants';
+import { LoaderService } from 'src/app/core/services/loader.service';
 import { TasksService } from 'src/app/core/services/tasks.service';
 
 @Component({
@@ -15,7 +16,10 @@ export class TasksComponent implements OnInit {
   selectedItems: any = [];
   tasks: any;
 
-  constructor(private readonly taskService: TasksService) {}
+  constructor(
+    private readonly taskService: TasksService,
+    private readonly loader: LoaderService
+  ) {}
 
   ngOnInit(): void {
     this.getAllCategories();
@@ -23,25 +27,33 @@ export class TasksComponent implements OnInit {
   }
 
   getAllCategories() {
-    this.taskService.getAllTaskCategories().valueChanges().subscribe((data: any) => {
-      data.forEach((element: any) => {
-        element.name = `${element.name} ${this.smileyCategories[element.id]}`;
+    this.taskService
+      .getAllTaskCategories()
+      .valueChanges()
+      .subscribe((data: any) => {
+        data.forEach((element: any) => {
+          element.name = `${element.name} ${this.smileyCategories[element.id]}`;
+        });
+        this.data = data;
       });
-      this.data = data;
-    });
   }
 
   getTasks(categories?: any) {
-    this.taskService.getAllTasks().valueChanges().subscribe((data: any) => {
-      if (categories && categories.length) {
-        // const newArr = data.filter((t:any )=> t.categoryId )
-        this.tasks = data.filter((task: any) => {
-          return categories.includes(task.categoryId);
-        });
-      } else {
-        this.tasks = data;
-      }
-    });
+    this.loader.setLoading(true);
+    this.taskService
+      .getAllTasks()
+      .valueChanges()
+      .subscribe((data: any) => {
+        if (categories && categories.length) {
+          // const newArr = data.filter((t:any )=> t.categoryId )
+          this.tasks = data.filter((task: any) => {
+            return categories.includes(task.categoryId);
+          });
+        } else {
+          this.tasks = data;
+        }
+        this.loader.setLoading(false);
+      });
   }
 
   addCategories(args: any) {
