@@ -12,7 +12,7 @@ import { TasksService } from 'src/app/core/services/tasks.service';
 export class SearchComponent implements OnInit, OnDestroy {
   searchTerm!: string | null;
   tasks: any;
-  results:any
+  results: any = [];
   constructor(
     private route: ActivatedRoute,
     private readonly tasksService: TasksService,
