@@ -1,6 +1,6 @@
 <div class="login-layout">
   <div class="app-centerd-layout app-card gap-5">
-    <img src="../../../../assets/light (1).png" alt="logo" class="w-56" />
+    <img src="../../../../assets/protasker-new.png" alt="logo" class="w-56" />
     <form class="flex flex-col gap-3 my-5" [formGroup]="loginForm">
       <div>
         <label for="email" class="app-form-label">email</label>
@@ -24,8 +24,10 @@
           id="password"
         />
       </div>
-      <button class="app-btn-primary" (click)="login()"
-      [disabled]="!loginForm.valid"
+      <button
+        class="app-btn-primary"
+        (click)="login()"
+        [disabled]="!loginForm.valid"
       >
         Login
       </button>

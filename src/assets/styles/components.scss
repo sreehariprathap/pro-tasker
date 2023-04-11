@@ -56,6 +56,12 @@
 .app-btn-primary {
   @apply btn btn-primary;
 }
+.app-btn-primary:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  @apply dark:bg-dark  dark:text-black ;
+}
+
 .task-card {
   @apply bg-primary min-h-[16rem] w-40 m-3 rounded-md text-white;
 }

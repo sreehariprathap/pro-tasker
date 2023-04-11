@@ -91,9 +91,22 @@
 .e-bigger.e-small .e-calendar .e-content span {
   @apply dark:black-text text-black;
 }
-.e-calendar th,
-.e-bigger.e-small .e-calendar th {
-  @apply dark:black-text text-black;
+::ng-deep .e-calendar th {
+  color: $primary;
+}
+
+::ng-deep .e-calendar .e-content span.e-day {
+  color: $primary;
+}
+::ng-deep .e-calendar .e-header .e-title {
+  color: $primary !important;
+  padding-left: 1rem !important;
+}
+::ng-deep .e-calendar .e-content td.e-focused-date.e-today span.e-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 @layer utilities {

@@ -22,5 +22,6 @@ export class SearchComponent implements OnInit {
     this.router.navigate(['search'], {
       queryParams: { searchTerm: this.searchTerm },
     });
+    this.searchTerm = '';
   }
 }
